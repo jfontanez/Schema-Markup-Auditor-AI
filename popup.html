@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schema Markup Auditor</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+        </svg>
+        Schema Auditor
+      </h1>
+      <button id="settingsBtn" class="icon-btn" title="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6m0-18a2 2 0 012 2v2a2 2 0 01-2 2 2 2 0 01-2-2V3a2 2 0 012-2zm0 12a2 2 0 012 2v2a2 2 0 01-2 2 2 2 0 01-2-2v-2a2 2 0 012-2zm0-6a2 2 0 012 2v2a2 2 0 01-2 2 2 2 0 01-2-2V9a2 2 0 012-2z"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+        </svg>
+      </button>
+    </header>
+
+    <div id="mainView">
+      <div class="intro-section">
+        <div class="intro-content">
+          <h2>Schema Markup Auditor</h2>
+          <p class="intro-description">
+            Analyze and validate structured data (JSON-LD, Microdata, RDFa) on any webpage. 
+            Get instant feedback on schema implementation with AI-powered recommendations.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Multi-format detection</span>
+            </div>
+            <div class="feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Real-time validation</span>
+            </div>
+            <div class="feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>AI recommendations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="auditBtn" class="primary-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          Audit Current Page
+        </button>
+      </div>
+
+      <footer class="footer">
+        <p>Developed by <strong>José Fontánez</strong></p>
+        <p class="footer-links">
+          <a href="https://github.com/jfontanez/Schema-Markup-Auditor-AI" target="_blank">Documentation</a> • 
+          <a href="#" id="aboutLink">About</a>
+        </p>
+      </footer>
+
+      <div id="loadingState" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>Analyzing schema markup...</p>
+      </div>
+
+      <div id="resultsView" class="results-view hidden">
+        <div class="results-header">
+          <h2>Audit Results</h2>
+          <div class="results-actions">
+            <button id="exportBtn" class="secondary-btn" title="Export Report">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m4-5l5 5 5-5m-5 5V3"/>
+              </svg>
+            </button>
+            <button id="closeResultsBtn" class="icon-btn" title="Close">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="summarySection" class="summary-section">
+          <div class="stat-cards">
+            <div class="stat-card">
+              <div class="stat-value" id="totalSchemas">0</div>
+              <div class="stat-label">Schema Types</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="issuesCount">0</div>
+              <div class="stat-label">Issues Found</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="warningsCount">0</div>
+              <div class="stat-label">Warnings</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="schemas">Schema Data</button>
+          <button class="tab-btn" data-tab="issues">Issues</button>
+          <button class="tab-btn" data-tab="ai">AI Recommendations</button>
+        </div>
+
+        <div id="tabContent">
+          <div id="schemasTab" class="tab-content active">
+            <div class="schema-filter">
+              <select id="schemaTypeFilter">
+                <option value="all">All Schema Types</option>
+              </select>
+              <select id="schemaFormatFilter">
+                <option value="all">All Formats</option>
+                <option value="json-ld">JSON-LD</option>
+                <option value="microdata">Microdata</option>
+                <option value="rdfa">RDFa</option>
+              </select>
+            </div>
+            <div id="schemasList"></div>
+          </div>
+
+          <div id="issuesTab" class="tab-content">
+            <div id="issuesList"></div>
+          </div>
+
+          <div id="aiTab" class="tab-content">
+            <div id="aiRecommendations">
+              <div class="ai-config-notice">
+                <p>Configure your AI API key in settings to get recommendations</p>
+                <button id="goToSettingsBtn" class="secondary-btn">Go to Settings</button>
+              </div>
+              <button id="getAiRecommendationsBtn" class="primary-btn hidden">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                Get AI Recommendations
+              </button>
+              <div id="aiContent" class="ai-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="settingsView" class="settings-view hidden">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button id="closeSettingsBtn" class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="settings-content">
+        <div class="setting-group">
+          <label for="aiProvider">AI Provider</label>
+          <select id="aiProvider">
+            <option value="">-- Select Provider --</option>
+            <option value="openai">OpenAI (ChatGPT)</option>
+            <option value="anthropic">Anthropic (Claude)</option>
+            <option value="google">Google (Gemini)</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="apiKey">API Key</label>
+          <input type="password" id="apiKey" placeholder="Enter your API key">
+          <small>Your API key is stored locally and never shared</small>
+        </div>
+
+        <div class="setting-group">
+          <label for="modelSelect">Model (Optional)</label>
+          <input type="text" id="modelSelect" placeholder="e.g., gpt-4, claude-3-opus">
+          <small>Leave blank to use default model</small>
+        </div>
+
+        <div class="settings-actions">
+          <button id="saveSettingsBtn" class="primary-btn">Save Settings</button>
+          <button id="testApiBtn" class="secondary-btn">Test Connection</button>
+        </div>
+
+        <div id="settingsMessage" class="settings-message hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>

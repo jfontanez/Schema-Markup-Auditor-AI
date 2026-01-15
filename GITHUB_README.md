@@ -9,7 +9,7 @@
 
 **A professional Chrome extension for auditing and analyzing structured data (schema markup) on any webpage with AI-powered recommendations.**
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [AI Integration](#ai-integration) • [Contributing](#contributing)
+[Features](#features) • [Installation](#installation) • [Usage](#usage) • [AI Integration](#ai-integration) • [Screenshots](#screenshots) • [Contributing](#contributing)
 
 </div>
 
@@ -79,7 +79,7 @@ Schema Markup Auditor is a powerful tool designed for SEO professionals, web dev
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jfontanez/Schema-Markup-Auditor-AI.git
-   cd Schema-Markup-Auditor-AI
+   cd schema-markup-auditor
    ```
 
 2. **Load in Chrome**
@@ -190,10 +190,6 @@ The extension validates and provides specific recommendations for:
 
 ## 📊 Use Cases
 
-### Screenshots
-
-> **Coming Soon**: Screenshots will be added to showcase the extension's interface and features.
-
 ### For SEO Professionals
 - Client website audits
 - Competitive analysis
@@ -270,7 +266,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Professional SEO & Web Development Contractor
 - Specialized in Technical SEO and Automation
-- GitHub: [@jfontanez](https://github.com/jfontanez)
 
 ## 🙏 Acknowledgments
 
@@ -282,8 +277,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For issues, questions, or suggestions:
-- 🐛 **Issues**: [GitHub Issues](https://github.com/jfontanez/Schema-Markup-Auditor-AI/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/jfontanez/Schema-Markup-Auditor-AI/discussions)
+- 📧 Email: [Your Email]
+- 🐛 Issues: [GitHub Issues](https://github.com/jfontanez/Schema-Markup-Auditor-AI/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/jfontanez/Schema-Markup-Auditor-AI/discussions)
 
 ## ⭐ Star History
 
