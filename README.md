@@ -15,44 +15,44 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 Schema Markup Auditor is a powerful tool designed for SEO professionals, web developers, and content teams to audit, validate, and optimize structured data implementation on websites. It combines automated validation with AI-powered recommendations to provide comprehensive schema analysis.
 
-## ✨ Features
+## Features
 
 ### Core Auditing Capabilities
 
-- **🔍 Multi-Format Detection**
+- ** Multi-Format Detection**
   - JSON-LD (JavaScript Object Notation for Linked Data)
   - Microdata (HTML attribute-based markup)
   - RDFa (Resource Description Framework in Attributes)
 
-- **✅ Comprehensive Validation**
+- ** Comprehensive Validation**
   - Real-time syntax error detection
   - Required property checking for 15+ schema types
   - Missing field warnings
   - Schema.org compliance verification
 
-- **📊 Individual Schema Viewing**
+- ** Individual Schema Viewing**
   - Expand/collapse functionality for each schema
   - Property preview with key-value pairs
   - Raw JSON/markup display
   - Filter by schema type or format
 
-- **🔗 External Validation**
+- ** External Validation**
   - One-click Google Rich Results Test integration
   - Direct Schema.org Validator submission
   - Instant validation workflow
 
 ### AI-Powered Recommendations
 
-- **🤖 Multi-Provider Support**
+- ** Multi-Provider Support**
   - OpenAI (GPT-4, GPT-3.5-turbo)
   - Anthropic (Claude Opus, Sonnet, Haiku)
   - Google (Gemini Pro)
 
-- **💡 Smart Analysis**
+- ** Smart Analysis**
   - Page content analysis
   - Missing schema opportunities identification
   - Improvement suggestions for existing markup
@@ -60,19 +60,19 @@ Schema Markup Auditor is a powerful tool designed for SEO professionals, web dev
 
 ### Professional Features
 
-- **📤 Export & Share**
+- ** Export & Share**
   - JSON report generation
   - Copy schema code to clipboard
   - View raw schema in new window
   - Shareable audit reports
 
-- **🎨 Modern Interface**
+- ** Modern Interface**
   - Clean, intuitive design
   - Tabbed navigation (Schema Data, Issues, AI Recommendations)
   - Summary dashboard with key metrics
   - Responsive layout
 
-## 🚀 Installation
+## Installation
 
 ### From Source (For Development)
 
@@ -128,7 +128,7 @@ Each schema includes buttons to:
 - **Google Test**: Validate with Google Rich Results Test
 - **Schema.org**: Validate with official Schema.org Validator
 
-## 🤖 AI Integration
+## AI Integration
 
 ### Setup
 
@@ -151,7 +151,7 @@ Each schema includes buttons to:
 - **Balanced**: Claude Sonnet or GPT-3.5-turbo
 - **Budget**: Google Gemini (generous free tier)
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Technology Stack
 
@@ -188,7 +188,7 @@ The extension validates and provides specific recommendations for:
 - Recipe, HowTo, FAQPage
 - BreadcrumbList, and more...
 
-## 📊 Use Cases
+## Use Cases
 
 ### Screenshots
 
@@ -213,7 +213,7 @@ The extension validates and provides specific recommendations for:
 - Check FAQ/HowTo implementation
 - Validate recipe structured data
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 - ✅ **Local Processing**: All schema extraction happens locally
 - ✅ **No Tracking**: Extension doesn't track browsing activity
@@ -221,7 +221,7 @@ The extension validates and provides specific recommendations for:
 - ✅ **Direct API Calls**: No intermediary servers
 - ✅ **Open Source**: Full transparency of code
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -244,7 +244,7 @@ Contributions are welcome! Here's how you can help:
 - Test thoroughly before submitting
 - Update documentation as needed
 
-## 📝 Roadmap
+## Roadmap
 
 Future enhancements planned:
 
@@ -256,15 +256,15 @@ Future enhancements planned:
 - [ ] WordPress plugin integration
 - [ ] Team collaboration features
 
-## 🐛 Known Issues
+## Known Issues
 
 Currently no major issues. Please report any bugs you find!
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **José Fontánez**
 
@@ -272,20 +272,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Specialized in Technical SEO and Automation
 - GitHub: [@jfontanez](https://github.com/jfontanez)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Schema.org for structured data standards
 - Google for Rich Results Test
 - OpenAI, Anthropic, and Google for AI APIs
 - Chrome Extensions community for best practices
 
-## 📞 Support
+## Support
 
 For issues, questions, or suggestions:
-- 🐛 **Issues**: [GitHub Issues](https://github.com/jfontanez/Schema-Markup-Auditor-AI/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/jfontanez/Schema-Markup-Auditor-AI/discussions)
+-  **Issues**: [GitHub Issues](https://github.com/jfontanez/Schema-Markup-Auditor-AI/issues)
+-  **Discussions**: [GitHub Discussions](https://github.com/jfontanez/Schema-Markup-Auditor-AI/discussions)
 
-## ⭐ Star History
+##  Star History
 
 If you find this tool useful, please consider giving it a star!
 
